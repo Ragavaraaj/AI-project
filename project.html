@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>PROJECT</title>
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->
+	<!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<body>
+     <main id="main-404-content" class="main-content-static">
+
+   	<div class="content-wrap">
+
+		   <div class="shadow-overlay"></div>
+
+		   <div class="main-content">
+		   	<div class="row">
+		   		<div class="col-twelve">
+			  		
+			  			<h1 class="kern-this">Neural Networks</h1>
+			  			<p>
+						<br/>
+						My project is all about predicting your total marks ( final board exam marks ) with just your liking of the subject this is done using neural network which is an AI algorithm which trains itself when you give it data and after training it will have the capacity to predict what will be marks for a specific liking.
+						<br/><br/>
+						This where you guys come into play were your data can help me predict with more accuracy. So if you feel like giving your data then please select the board of education
+ 						</p>
+					<button class="button"onclick="myCbse()">CBSE</button>
+					<button class="button"onclick="myState()">State Board</button>
+					<button class="button"onclick="myPredic_cb()">Predict CBSE</button>
+					<button class="button"onclick="myPredic_sb()">Predict State Board</button>
+			   	</div> <!-- /twelve --> 		   			
+		   	</div> <!-- /row -->    		 		
+		   </div> <!-- /main-content --> 
+
+	</div> <!-- /content-wrap -->
+   
+   </main> <!-- /main-404-content -->
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script>
+	function myState() 
+	{
+    var myWindow = window.open("form_sb.html", "_blank");
+	}
+	
+	function myCbse() 
+	{
+    var myWindow = window.open("form_cb.html", "_blank");
+    }
+	
+	function myPredic_cb() 
+	{
+    var myWindow = window.open("predict_cb.html", "_blank");
+    }
+	
+	function myPredic_sb() 
+	{
+    var myWindow = window.open("predict_sb.html", "_blank");
+    }
+</script>
+
+</body>
+
+</html>

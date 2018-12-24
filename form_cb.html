@@ -1,0 +1,62 @@
+<html>
+   <link rel="stylesheet" href="css/form.css">
+<script>
+function checkInp()
+{
+  var e =document.getElementById("e").value;
+  var m =document.getElementById("m").value;
+  var p =document.getElementById("p").value;
+  var c =document.getElementById("c").value;
+  var cb =document.getElementById("cb").value;
+  var to =document.getElementById("to").value;
+  if ( isNaN(e) == 1 || isNaN(m) == 1 ||  isNaN(p) == 1 || isNaN(c) == 1 || isNaN(cb) == 1 || isNaN(to) == 1 ) 
+  {	
+    alert("Must input numbers only");
+    return false;
+  }
+  else if ( (e>0 && e<7) != 1 || (m>0 && m<7) != 1 || (0<p && p<7) != 1 || (c>0 && c<7) != 1 || (cb>0 && cb<7) != 1 || (to>149 && to<501) != 1 )
+  {
+	alert("out of range \n The value should be between 1 to 5 for first 5 fields \n and between 150 to 500 for the last field ");
+    return false;
+  }
+  else if ( e == m || e == p || e == c || e == cb || m == p || m == c || m == cb || p == c || p == cb || c == cb )
+  {
+	alert("fields from 1 to 5 can not be equal !");
+	return false;
+  }
+}
+</script>
+
+<body>
+<div class="container">  
+  <form id="contact" name="dataForm" action="phpscript_cb.php" method="post">
+    <h3>Project Form</h3>
+    <h4>
+	Kindly fill up the form with proper details and also give your total that is your final exams marks out of 500 as accurate as possible. <br/> Also please do rank the subjects from 5 to 1 and the ranking should not repeat. Where your most favourite subject is given a '5' and least favourite is given a '1'.<br/> For example ENGLISH = 1 , MATHS = 2 , PHYSICS = 3 , CHEMISTRY = 4 , COMPUTER/BIO = 5 , TOTAL = 400 here your most favourite subject is computer or bio and least is English. 
+	</h4>
+    <fieldset>
+      <input placeholder="ENGLISH" type="text" tabindex="1" name="e" id ="e" required autofocus />
+    </fieldset>
+    <fieldset>
+      <input placeholder="MATHS" type="text" tabindex="1" name="m" id ="m" required autofocus />
+    </fieldset>
+    <fieldset>
+      <input placeholder="PHYSICS" type="text" tabindex="1" name="p" id ="p" required autofocus />
+    </fieldset>
+    <fieldset>
+      <input placeholder="CHEMISTRY" type="text" tabindex="1" name="c" id ="c" required autofocus />
+    </fieldset>
+    <fieldset>
+      <input placeholder="COMPUTER/BIO" type="text" tabindex="1" name="cb" id ="cb" required autofocus />
+    </fieldset>
+    <fieldset>
+      <input placeholder="TOTAL" type="text" tabindex="1" name="to" id ="to" required autofocus />
+    </fieldset>
+    <fieldset>  
+	  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" onclick = "return checkInp()">Submit</button>
+    </fieldset>
+   </form>
+</div>
+<body>
+</html>
+
